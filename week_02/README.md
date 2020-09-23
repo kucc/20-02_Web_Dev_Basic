@@ -55,7 +55,12 @@
 4. `git checkout -b "{본인 아이디_02}"` (예시: `git checkout -b "njh7799_02"`)
 5. `mkdir {본인 이름}` (예시: `mkdir 남정호`)
 6. `cd {본인 이름}`
-7. 코딩 시작
+7. `git branch`를 입력하였을 때 아래 사진과 같이 나오면 성공
+
+![image](https://user-images.githubusercontent.com/40619551/93971614-8886ec00-fdab-11ea-82d4-cdaca68ab7ca.png)
+
+
+
 
 ### 작업 내용 원격에 push
 
