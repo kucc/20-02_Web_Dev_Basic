@@ -1,0 +1,21 @@
+body {
+  margin: 10;
+}
+a {
+  color: black;
+}
+h1 {
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 3px solid plum;
+  margin: 20;
+  padding: 20px;
+}
+ol {
+  width: 2000px;
+  margin: 0;
+  padding: 35px;
+}
+img {
+  text-align: center;
+}
