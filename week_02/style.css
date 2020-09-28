@@ -1,0 +1,66 @@
+#id-area {
+  width: 460px;
+  height: 48px;
+
+  margin: auto;
+  background-color: white;
+  border: solid #dadada;
+  border-width: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+#password-area {
+  width: 460px;
+  height: 48px;
+
+  margin: auto;
+  background-color: white;
+  border: solid #dadada;
+  border-width: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+/*질문 2에 해당하는 부분은 24-29라인으로 해결했습니다. 그러므로 만약에 왜 안되는지 실행을 해보실 예정이시면 이부분을 주석처리해주세요! */
+#id-area:focus-within {
+  border-color: #08a600;
+}
+#password-area:focus-within {
+  border-color: #08a600;
+}
+
+#login {
+  background-color: #08a600;
+  color: white;
+  border: 0;
+  width: 460px;
+  height: 48px;
+  margin-bottom: 29px;
+}
+
+input[type="text"] {
+  margin-top: 5px;
+  height: 29px;
+  border: 0px;
+  padding-top: 3px;
+  padding-left: 11px;
+  padding-right: 35px;
+  padding-bottom: 3px;
+  width: 400px;
+}
+
+input[type="password"] {
+  margin-top: 5px;
+  height: 29px;
+  border: 0px;
+  padding-top: 3px;
+  padding-left: 11px;
+  padding-right: 35px;
+  padding-bottom: 3px;
+  width: 400px;
+}
+
+.align-center {
+  padding: 5px;
+  text-align: center;
+  border: 1px;
+}
