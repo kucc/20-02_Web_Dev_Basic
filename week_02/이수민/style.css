@@ -1,0 +1,22 @@
+.topic {
+  text-align: center;
+  color: green;
+}
+.domain {
+  border: 2px solid lightgray;
+  margin-right: 400px;
+  margin-left: 400px;
+  margin-top: 100px;
+  padding-top: 10px;
+  background-color: lightgray;
+}
+.inputs {
+  display: flex;
+  justify-content: center;
+}
+.submit_ {
+  border: 2px green solid;
+  width: 170px;
+  background-color: green;
+  color: white;
+}
