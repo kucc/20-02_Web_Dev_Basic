@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <div class="page_header">
+    <title>NAVER 로그인 페이지</title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="naverstyle.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript">
+    $(function(){
+  var id = $('.id');
+  id.focus(function(){
+    id.val();
+  });
+  id.blur(function(){
+    id.val();
+  });
+});
+</script>
+</div>
+</head>
+
+<body>
+    <div class="main_container">
+        <div style="padding: 20px;">
+        <div class="login_container">
+            <img src="https://lh3.googleusercontent.com/proxy/Qes1f6I5bo7eJuNJqizXsqWUAfAQbEleFAV5g64zQ4xls2Ae-PCAhNX6f6RNf2LWcAvrHLECFUWJsnRcGQAylhNa3z9rjf9k9jvLLjjDek3GjmXZ4XsVY5VxTNJIWSm6AhKE7dT27EvP">
+    <div id ="inputs"><form>
+        <p><input class="id" type="text" name="id" style="width:380px; height:40px; border: solid 1px lightgrey" placeholder="아이디"></input></p>
+        <p><input class="password" type="password" name="pw" style="width:380px; height:40px; border: solid 1px lightgrey" placeholder="비밀번호"></input></p>
+    </form></div>
+    <div>
+        <button type="button" class="form_submit_button" style="height:50px" onclick="location.href='naverpage.html'">로그인</button>
+    </div>
+</div>
+</div>
+</body>
+</html>

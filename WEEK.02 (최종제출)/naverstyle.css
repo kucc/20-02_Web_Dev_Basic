@@ -1,0 +1,61 @@
+.page_header {
+  background-color: rgb(240, 240, 240);
+}
+
+.content {
+  margin-left: 40px;
+  background-color: rgb(240, 240, 240);
+}
+
+.main_container {
+  border: 0px solid;
+}
+
+.login_container {
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  border-radius: 3px;
+  background-color: rgb(243, 243, 243);
+}
+
+.id::-webkit-input-placeholder {
+  padding-left: 9px;
+}
+
+.password::-webkit-input-placeholder {
+  padding-left: 9px;
+}
+
+.login_container img {
+  text-align: center;
+  margin: 20;
+  margin-left: 160px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 20px;
+  color: rgb(33, 202, 70);
+  width: 250px;
+  height: auto;
+}
+
+.login_container p {
+  text-align: center;
+  color: lightgrey;
+  margin-top: -20px;
+  padding-right: 5px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.form_submit_button {
+  text-align: center;
+  width: 385px;
+  margin-top: -15px;
+  margin-left: 108px;
+  background-color: rgb(33, 202, 70);
+  border: 1px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
