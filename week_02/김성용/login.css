@@ -1,0 +1,39 @@
+body {
+  text-align: center;
+  transform: translateY(50%);
+  background-color: rgb(230, 230, 230);
+}
+h1 {
+  font-size: 60px;
+  margin: 30px;
+}
+a:link {
+  color: rgb(60, 190, 60);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(60, 190, 60);
+  text-decoration: none;
+}
+#userid {
+  height: 50px;
+  width: 400px;
+  border-color: rgb(230, 230, 230);
+}
+#userpw {
+  margin: 10px;
+  height: 50px;
+  width: 400px;
+  border-color: rgb(230, 230, 230);
+}
+#button {
+  height: 50px;
+  width: 410px;
+  background-color: rgb(60, 190, 60);
+  font-size: 15px;
+  color: white;
+  border-color: rgb(60, 190, 60);
+}
+.gr {
+  outline-color: rgb(60, 190, 60);
+}
