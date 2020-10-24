@@ -1,4 +1,6 @@
-function focusgreen() {
-  let inputbox = document.getElementById("inputbox");
-  inputbox.style.border = "1px solid #03b853";
+function focusgreen(x) {
+  x.style.border = "1px solid #03b853";
+}
+function losefocus(y) {
+  y.style.horder = "none";
 }

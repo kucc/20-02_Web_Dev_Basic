@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>네이버 : 로그인</title>
-    <script src="script.js"></script>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="background">
+    <script src="script.js"></script>
     <div class="wrap">
       <div class="top">
         <p id="logobox">
@@ -21,7 +21,8 @@
               type="text"
               name="userID"
               placeholder="아이디"
-              onfocus="focusgreen()"
+              onfocus="focusgreen(this)"
+              onblur="losefocus(this)"
             />
           </div>
 
@@ -31,6 +32,8 @@
               type="text"
               name="userPW"
               placeholder="비밀번호"
+              onfocus="focusgreen(this)"
+              onblur="losefocus(this)"
             />
           </div>
           <div>
