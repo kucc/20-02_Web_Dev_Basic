@@ -1,0 +1,42 @@
+.wrap {
+  text-align: center;
+}
+.top {
+  display: inline-block;
+}
+#logobox {
+  padding: 106px 0 53px 0;
+}
+.bottom {
+  display: inline-block;
+}
+.inputbox {
+  width: 458px;
+  height: 46px;
+  border: 1px solid #e4e4e4;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+}
+.writingbox {
+  width: 412px;
+  height: 30px;
+  color: #9e9e9e;
+  font-size: 12pt;
+  border: none;
+  margin: 7px 35px 10px 11px;
+  padding: none;
+}
+.loginbutton {
+  width: 459px;
+  height: 55px;
+  color: #ffffff;
+  font-size: 12pt;
+  display: block;
+  background-color: #03c75a;
+  border: 1px solid #03b853;
+  margin: 12px 0px 14px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.background {
+  background-color: #f5f6f7;
+}
