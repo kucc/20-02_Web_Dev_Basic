@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>week5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body style="background-color: #f5f6f7">
+    <h1 class="align-center" style="font-size: 50px; color: #08a600">NAVER</h1>
+    <form id="form">
+      <div class="what2write">아이디</div>
+      <div>
+        <div id="id-area">
+          <span>
+          <input
+            type="text"
+            name="name"
+            id="userid"
+            placeholder="아이디"
+            maxlength="41"
+          />
+          </span>
+          <span>@naver.com</span>
+        </div>
+      </div>
+      <div class="warning" id="idw">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</div>
+      <div class="emptyWarning" id="idew">필수 입력 항목입니다.</div>
+
+      <div class="what2write">비밀번호</div>
+      
+        <div class="password-area">         
+          <input
+            type="password"
+            name="password"
+            id="userpw"
+            placeholder="비밀번호"
+            maxlength="41"
+          />
+        </div>
+      
+      <div class="warning" id="pww">8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</div>
+      <div class="emptyWarning" id="pwew">필수 입력 항목입니다.</div>
+
+      <div class="what2write">비밀번호 재확인</div>
+      
+        <div class="password-area">
+          <input
+            type="password"
+            name="password"
+            id="userpwcheck"
+            placeholder="비밀번호"
+            maxlength="41"
+          />
+        </div>
+      
+      <div class="warning" id="pwcw">비밀번호가 일치하지 않습니다.</div>
+      <div class="emptyWarning" id="pwcew">필수 입력 항목입니다.</div>
+
+      <div class="what2write">이름</div>
+      
+        <div id="name">
+          <input
+            type="text"
+            name="name"
+            id="username"
+            placeholder="아이디"
+            maxlength="41"
+          />
+        </div>
+      
+      <div class="emptyWarning" id="nmew">필수 입력 항목입니다.</div>
+      
+      <div class="what2write">생년월일</div>
+      
+        <div id="birthday">
+          <input
+            type="text"
+            name="name"
+            id="userbirth"
+            placeholder="아이디"
+            maxlength="41"
+          />
+        </div>
+      
+      <div class="warning" id="bdw">8자리 정확한 생년월일을 입력해주세요 (예시: 19980122)</div>
+      <div class="emptyWarning" id="bdew">필수 입력 항목입니다.</div>
+
+      <div class="align-center">
+        <script>
+          function loginpage() {
+            var userid = document.getElementById("userid").value;
+            var userpw = document.getElementById("userpw").value;
+            if (userid != "" && userpw != "") {
+              location.href = "login.html";
+              alert(userid + "님이 로그인하셨습니다.");
+              
+            }
+          }
+        </script>
+
+        <input
+          type="submit"
+          value="가입하기"
+          id="signup"
+          onclick="loginpage(); return false;"
+        />
+      </div>
+      <script>
+        var id = document.getElementById("userid");
+        var pw = document.getElementById("userpw");
+        var pwcheck = documetn.getElementById("userpwcheck");
+        var name = document.getElementById("username");
+        var birthday = document.getElementById("userbirth");
+        var sign = document.getElementById("signup");
+        
+        var idw = document.getElementById("idw"); // id 생성규칙 위반 문구
+        var idew = document.getElementById("idew"); // id 미입력 오류 문구
+        var pww = document.getElementById("pww"); // 비밀번호 생성규칙 위반 문구
+        var pwew = document.getElementById("pwew"); // 비밀번호 미입력 오류 문구
+        var pwcw = document.getElementById("pwcw"); // 비밀번호 재확인 오류 문구
+        var pwcew = document.getElementById("pwcew"); // 비밀번호 재확인 미입력 오류 문구
+        var nmew = document.getElementById("nmew"); // 이름 미입력 오류 문구
+        var bdw = document.getElementById("bdw"); // 생년월일 생성규칙 위반 문구
+        var bdew = document.getElementById("bdew"); // 생년월일 미입력 오류 문구
+  
+        id.addEventListener("focusout", function(event){
+          var idFormat = /[a-zA-Z0-9_-]{5,20}/;
+          if(event.target.value == ""){
+            idew.style.display = "block";
+          }
+          else if(!idFormat.test(event.target.value)){
+            idw.style.display = "block";
+          }
+        });
+        pw.addEventListener("blur", pwValidate);
+        pwcheck.addEventListener("blur", pwEqualTest);
+        name.addEventListener("blur", nameEmptyTest);
+        birthday.addEventListener("blur", bdValidate);
+        sign.addEventListener("click", signValidate);
+  
+        function idValidate(){
+          var idFormat = /[a-zA-Z0-9_-]{5,20}/;
+          if(id.value == ""){
+            idew.style.display = "block";
+          }
+          else if(!idFormat.test(id.value)){
+            idw.style.display = "block";
+          }
+        }
+  
+        function pwValidate(){
+          var pwFormat = /[a-zA-Z0-9~!@#$%^&*()_+|<>?:{}]{8,16}/;
+          if(pw.value == ""){
+            pwew.style.display = "block";
+          }
+          else if(!pwFormat.test(pw.value)){
+            pww.style.display = "block";
+          }
+        }
+  
+        function pwEqualTest(){
+          if(pw.value != pwcheck.value){
+            pwcw.style.display ="block";
+          }
+          else if(pwcheck.value == ""){
+            pwcew.style.display = "block";
+          }
+        }
+  
+        function nameEmptyTest(){
+          if(name.value == ""){
+            nmew.style.display = "block";
+          }
+        }
+  
+        function bdValidate(){
+          bdFormat = /[0-9]{8}/;
+          if(birthday.value == ""){
+            bdew.style.display = "block";
+          }
+          else if(!bdFormat.test(birthday.value)){
+            bdw.style.display = "block";
+          }
+        }
+  
+        function signValidate(){
+  
+        }
+  
+      </script>
+    </form>
+    
+  </body>
+</html>
