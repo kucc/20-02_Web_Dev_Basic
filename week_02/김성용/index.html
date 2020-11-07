@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <script src = "login.js"></script>
+    <h1><a href = "index.html">NAVER</a></h1>
+    <form name="login" method="post">
+      <div class="input">
+        <input id="userid" type="id" name="Id" onfocus="bordergreen(this)" placeholder="아이디" /><br />
+        <input id="userpw" type="password" name="PW" onfocus="bordergreen(this)" placeholder="비밀번호" />
+      </div>
+      <div class="button">
+      <button id="button" type="summit" name="submit" onclick ="f_link(); return false;">로그인</button>
+     </div>
+    </form>
+  </body>
+</html>
