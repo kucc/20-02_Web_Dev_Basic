@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>week2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body style="background-color: #f5f6f7">
+    <h1 class="align-center" style="font-size: 50px; color: #08a600">NAVER</h1>
+    <form id="form">
+      <div class="align-center">
+        <div id="id-area">
+          <input
+            type="text"
+            name="name"
+            id="userid"
+            placeholder="아이디"
+            onclick="idfocusMethod"
+            maxlength="41"
+          />
+        </div>
+      </div>
+      <div class="align-center">
+        <div id="password-area">
+          <input
+            type="password"
+            name="password"
+            id="userpw"
+            placeholder="비밀번호"
+            onclick="pwfocusMethod"
+            maxlength="41"
+          />
+        </div>
+      </div>
+
+      <div class="align-center">
+        <script>
+          function loginpage() {
+            var userid = document.getElementById("userid").value;
+            var userpw = document.getElementById("userpw").value;
+            if (userid != "" && userpw != "") {
+              location.href = "login.html";
+              alert(userid + "님이 로그인하셨습니다.");
+              //질문1. 43에서 먼저 페이지 전환을 하고 44라인에서 alert창을 띄우는데 왜 실제로 실행하면 alert창이 먼저 뜨는지 모르겠습니다
+            }
+          }
+        </script>
+
+        <input
+          type="submit"
+          value="로그인"
+          id="login"
+          onclick="loginpage(); return false;"
+        />
+      </div>
+    </form>
+    <!-- 질문 2. 이 코드를 실행하면 입력창을 클릭했을 때 테두리가 초록색이 될거라고 생각했는데 아니었습니다. 이유를 모르겠습니다.
+      위의 19라인과 31라인은 일부러 함수뒤에 ()를 빼놓아서 실행이 되지 않도록 해놓았습니다.
+      결국 이걸 버리고 style.css(해당부분은 주석으로 표시해두었습니다)에서 focus-within의사 클래스를 사용해서 해결했는데 이건 왜 작동이 안된건지 궁금합니다.
+      
+      제 의도는 우선 아이디 input창이나 비밀번호 input창에 click이 된 경우, 
+      핸들러에서 해당 input창을 감싸는 div영역을 focus시키고(64, 68라인)
+      76-90까지의 코드로 focus된 구역의 borderColor를 초록색으로 바꿔주려는 것이었습니다!
+
+    <script>
+      idfocusMethod = function getFocusId() {
+        document.getElementById("id-area").focus();
+      };
+
+      pwfocusMethod = function getFocusPassword() {
+        document.getElementById("password-area").focus();
+      };
+
+      const form = document.getElementById("form");ㄴ
+
+      form.addEventListener(
+        "focus",
+        (event) => {
+          event.target.style.borderColor = "green";
+        },
+        true
+      );
+
+      form.addEventListener(
+        "blur",
+        (event) => {
+          event.target.style.borderColor = "#dadada";
+        },
+        true
+      );
+    </script>
+    -->
+  </body>
+</html>

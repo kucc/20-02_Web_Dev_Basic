@@ -1,0 +1,138 @@
+#id-area {
+  width: 460px;
+  height: 48px;
+
+  margin: auto;
+  background-color: white;
+  border: solid #dadada;
+  border-width: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.password-area {
+  width: 460px;
+  height: 48px;
+
+  margin: auto;
+  background-color: white;
+  border: solid #dadada;
+  border-width: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+#id-area:focus-within {
+  border-color: #08a600;
+}
+#password-area:focus-within {
+  border-color: #08a600;
+}
+
+#signup {
+  background-color: #08a600;
+  color: white;
+  border: 0;
+  width: 460px;
+  height: 48px;
+  margin-bottom: 29px;
+}
+
+#name {
+  width: 460px;
+  height: 48px;
+
+  margin: auto;
+  background-color: white;
+  border: solid #dadada;
+  border-width: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+#birthday {
+  width: 460px;
+  height: 48px;
+
+  margin: auto;
+  background-color: white;
+  border: solid #dadada;
+  border-width: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+#name:focus-within {
+  border-color: #08a600;
+}
+#birthday:focus-within {
+  border-color: #08a600;
+}
+
+#userid {
+  width: 250px;
+}
+
+#userid:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  margin-top: 5px;
+  height: 29px;
+  border: 0px;
+  padding-top: 3px;
+  padding-left: 11px;
+  padding-right: 35px;
+  padding-bottom: 3px;
+  width: 400px;
+}
+
+input[type="password"] {
+  margin-top: 5px;
+  height: 29px;
+  border: 0px;
+  padding-top: 3px;
+  padding-left: 11px;
+  padding-right: 35px;
+  padding-bottom: 3px;
+  width: 400px;
+}
+
+.align-center {
+  padding: 5px;
+  text-align: center;
+  border: 1px;
+}
+
+.not-center {
+  padding: 5px;
+  border: 1px;
+}
+
+.what2write {
+  width: 460px;
+  height: 24px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 1px;
+}
+/* emptyWarning은 미입력해서 나는 에러 warning은 다른 이유의 에러*/
+.warning {
+  width: 460px;
+  height: 24px;
+  margin: auto;
+  font-size: small;
+  color: red;
+  display: none; /*혹시 여기서 none으로 해준게 더 상위레벨의 명령이라 display를 addEventListener의 이벤트 헨들러에서 바꾸어도 계속 none인가 의심됩니다*/
+}
+
+.emptyWarning {
+  width: 460px;
+  height: 24px;
+  margin: auto;
+  font-size: small;
+  color: red;
+  display: none;
+}
