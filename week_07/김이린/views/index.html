@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <ul id="posts"></ul>
+  </head>
+  <script>
+    //script 바로 밑에서는 await을 쓸 수 없어서 .then으로 꺼냄
+    const postId = Number(/\/posts\/(\d+)/.exec(location.pathname)[1]);
+    const url = "https://jsonplaceholder.typicode.com/posts";
+    request(url).then((posts) => {
+      let postHTML = "";
+      for (const post of posts) {
+        //postHTML = postHTML+('<li>'+post.title+'</li>')
+        titleHTML += `${post[postId].title}`;
+        contentHTML += `{$post[postId].body}`;
+      }
+      document.getElementById("title").innerHTML = titleHTML;
+      document.getElementById("body").innerHTML = contentHTML;
+      //document.getElementByID("posts").innerHTML = postHTML;
+      //console.log(posts)
+    });
+    request();
+    //async 붙은 function은 data가 pormise로 감싸져서 반환됨
+    async function request() {
+      const response = await fetch(url);
+      const data = await response.json(); //response객체 안에 있는 걸 꺼내려면 json 써야 하는데 얘또 promise로 갇혀있음
+      return data;
+    } //데이터 꺼냄 response 객체 안에 있음 한 번 더 꺼내야함 또 꺼내야함
+    //fetch하면 데이터 온 게 promise객체 안에 갇힌 걸 await 써주면 알아서 꺼내줌
+  </script>
+</html>
