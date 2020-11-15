@@ -1,0 +1,21 @@
+<html>
+  <h2>포스트<h2>
+  <head>
+    <ul id="posts"></ul>
+  </head>
+  <script>
+    const url = "https://jsonplaceholder.typicode.com/posts"
+    request(url).then(posts =>{
+      const postId = Number(/\/posts\/(\d+)/.exec(location.pathname)[1]);
+      let postHTML = ""
+        postHTML = postHTML + `<h1>${posts[postId].title}</h1> <br>${posts[postId].body}`
+      document.getElementById("posts").innerHTML = postHTML;
+    })
+
+    async function request(url){
+      const response = await fetch(url)
+      const data = await response.json();
+      return data;
+    }
+  </script>
+</html>
