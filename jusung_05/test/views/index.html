@@ -6,20 +6,18 @@
   </head>
   <script>
     const postId = Number(/\/posts\/(\d+)/.exec(location.pathname)[1])
-    const url = "https://jsonplaceholder.typicode.com/posts"
+    const url = `http://localhost:4000/posts/${postId}`
 
-    request(url).then(posts =>{
-      let titleHTML = ""
-      let bodyHTML = ""
-      titleHTML += `${posts[postId-1].title}`
-      bodyHTML += `${posts[postId-1].body}`
+    request(url).then(post =>{
+      let titleHTML = `${post.title}`
+      let bodyHTML = `${post.body}`
       document.getElementById("title1").innerHTML = titleHTML;
       document.getElementById("body1").innerHTML = bodyHTML;
     })
 
     async function request(url){
       const response = await fetch(url)
-      const data = await response.json();
+      const data = await response.text();
       return data;
     }
   </script>

@@ -1,9 +1,14 @@
 const express = require('express');
+const cors = require("cors");
+
 
 const PORT = 3000;
 const app = express();
 
+app.use(cors());
+
 const router = require('./router/main')(app);
+
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
